@@ -16,7 +16,7 @@ export async function POST(req: Request) {
 
     const response = await anthropic.messages.create({
       model: 'claude-sonnet-4-6', // You can change this to a faster model like haiku if preferred
-      max_tokens: 4000,
+      max_tokens: 20000,
       system: "You are an expert front-end developer. Generate a complete, single-file HTML document containing embedded CSS and JavaScript based on the user's request. Do NOT wrap the code in markdown blocks (like ```html). Return ONLY the raw HTML code, starting with <!DOCTYPE html>.",
       messages: [{ role: 'user', content: prompt }],
     });
