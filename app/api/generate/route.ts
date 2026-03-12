@@ -16,7 +16,7 @@ export async function POST(req: Request) {
     // 1. Ask Claude to generate the response as a continuous stream
     const stream = await anthropic.messages.create({
       model: 'claude-sonnet-4-6',
-      max_tokens: 8192,
+      max_tokens: 20000,
       system: "You are an expert front-end developer. Generate a complete, single-file HTML document containing embedded CSS and JavaScript. You MUST finish the entire HTML document and close the final </html> tag. Keep styles and scripts efficient. Do NOT wrap the code in markdown blocks. Return ONLY the raw HTML code, starting with <!DOCTYPE html>.",
       messages: [{ role: 'user', content: prompt }],
       stream: true, // 🔥 This is the magic switch
