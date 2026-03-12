@@ -2,6 +2,7 @@ import Anthropic from '@anthropic-ai/sdk';
 
 const anthropic = new Anthropic();
 
+export const runtime = 'edge';
 // We keep this just to be safe, but the stream will bypass the hard crash
 export const maxDuration = 60; 
 
