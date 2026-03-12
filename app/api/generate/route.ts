@@ -1,6 +1,7 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { NextResponse } from 'next/server';
 
+export const maxDuration = 60; // Allows the function to run for 60 seconds
 // Initialize the Anthropic client
 // It will automatically use the process.env.ANTHROPIC_API_KEY
 const anthropic = new Anthropic();
